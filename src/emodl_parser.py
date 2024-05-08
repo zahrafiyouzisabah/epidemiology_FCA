@@ -1,12 +1,4 @@
-# {
-#     species: [{label: "S", initial: 990}, {label: "I", initial: 10}],
-#     reactions: [{from: "S", to: "I", rate: * Kl S}]
-# }
-
 import re
-
-with open('./emodls/se.emodl', 'r') as file:
-    model_data = file.read()
 
 
 def parse_model_data(data):
@@ -32,10 +24,3 @@ def parse_model_data(data):
         })
 
     return model_dict
-
-
-# Parse the model data
-parsed_model = parse_model_data(model_data)
-
-# Print the dictionary
-print(parsed_model)

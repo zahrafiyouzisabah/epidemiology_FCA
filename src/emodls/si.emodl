@@ -1,0 +1,18 @@
+; simplemodel
+
+(import (rnrs) (emodl cmslib))
+
+(start-model "si.emodl")
+
+(species S    990)
+(species I 80)
+
+(observe susceptible S)
+(observe infectious  I)
+
+(param Kl 0.2)
+
+
+(reaction infection(S)(I)(* Kl S))
+
+(end-model)

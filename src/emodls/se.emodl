@@ -6,6 +6,8 @@
 
 (species S 990)
 (species E 30)
+(species C)
+(species R 11)
 
 (observe susceptible S)
 (observe exposed     E)
@@ -13,5 +15,6 @@
 (param Ki 0.0005)
 
 (reaction exposure   (S) (E) (* Ki S))
+(reaction infection(C)(R)(* Kl STH))
 
 (end-model)

@@ -4,8 +4,11 @@
 
 (start-model "si.emodl")
 
-(species S    990)
+(species S    7000)
 (species I 80)
+(species E)
+(species C)
+(species R 76)
 
 (observe susceptible S)
 (observe infectious  I)
@@ -14,5 +17,7 @@
 
 
 (reaction infection(S)(I)(* Kl S))
+(reaction infection(S)(E)(* Kl EE))
+(reaction infection(C)(R)(* Kl STH))
 
 (end-model)

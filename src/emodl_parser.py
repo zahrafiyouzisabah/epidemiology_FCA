@@ -1,4 +1,24 @@
 import re
+'''
+This module parses the emold files in the following python dictionary format:
+
+{
+    'species': {'label': String, 'initial': Number}[] 
+    'reactions': {'from': String, 'to': String, 'rate': String}[]
+}
+
+Example: 
+{'species': [
+    {'label': 'S', 'initial': 990}, 
+    {'label': 'E', 'initial': 30}, 
+    {'label': 'C', 'initial': 0}, 
+    {'label': 'R    'initial': 11}
+],
+'reactions': [
+    {'from': 'S', 'to': 'E', 'rate': '(* Ki S)'}, 
+    {'from': 'C', 'to': 'R', 'rate': '(* Kl STH)'}
+]}
+'''
 
 
 def parse_model_data(data):

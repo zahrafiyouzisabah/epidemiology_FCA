@@ -1,5 +1,5 @@
 from emodl_parser import parse_model_data
-from emodl_silimarity_operator import similarity_operator
+from emodl_silimarity_operator2 import similarity_operator
 
 # Read model files
 with open('./emodls/se.emodl', 'r') as file:
